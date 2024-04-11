@@ -1,8 +1,12 @@
 server:
   port: 9090
+  # 开启优雅下线
+  shutdown: graceful
 spring:
   application:
     name: springboot-nacos
+  # 优雅下线超时时间
+  timeout-per-shutdown-phase: 5m
 
 nacos:
   discovery:
